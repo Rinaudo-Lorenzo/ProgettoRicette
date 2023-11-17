@@ -7,6 +7,8 @@ import { DettagliRicetteComponentComponent } from './dettagli-ricette-component/
 import { RicercaComponentComponent } from './ricerca-component/ricerca-component.component';
 import { PreviewRicettaComponent } from './preview-ricetta/preview-ricetta.component';
 
+import { HttpClient, HttpClientModule } from "@angular/common/http";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { PreviewRicettaComponent } from './preview-ricetta/preview-ricetta.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
