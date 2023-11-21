@@ -1,20 +1,21 @@
 <div class="mt-5" *ngFor="let ricetta of ricetteservice.listaRicette">
-    <div class="card border-0" >
+    <div class="card border-0" (click)="mostraDettagli($event, ricetta.id)">
 
         <div class="row g-0">
           <div class="col-md-4">
-            <img src={{ricetta.imageURL}} class="img-fluid rounded-start" alt="...">
+            <img src={{ricetta.URLimmagine}} class="img-fluid rounded-start" alt="...">
           </div>
     
           <div class="col-md-8">
     
             <div class="card-body">
-              <h5 class="fs-1">{{ricetta.name}}</h5>
-              <p class="card-text">{{ricetta.descriction}}</p>
+              
+              <h5 class="fs-1">{{ricetta.nome}}</h5>
+              <p class="card-text">{{ricetta.descrizione}}</p>
     
               <div class="d-flex justify-content-between card-text " >
-                <p class="card-text"><span class="text-muted">Tempo di Esecuzione: {{ricetta.totalTime}} min</span></p>
-                <p class="d-flex">Difficoltà: {{ricetta.difficulty}} </p>
+                <p class="card-text"><span class="text-muted">Tempo di Esecuzione: {{ricetta.tempoTotale}} min</span></p>
+                <p class="d-flex">Difficoltà: {{ricetta.difficolta}} </p>
               </div>
               
             </div>

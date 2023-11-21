@@ -6,33 +6,41 @@ import { Ricette } from '../model/ricette';
   providedIn: 'root'
 })
 export class RicetteServiceService {
+  private readonly API = "http://localhost:3000/ricette/";
+
   ricetta! : Ricette;
   listaRicette : Ricette[] = [];
+
   constructor(private datastorage: DataStorageService) { }
 
-  ElencoRicette() {
-
-    this.datastorage.getRequest('ricette').subscribe({
-      next: (data: any) => {
-        console.log(data);
-        this.listaRicette = data;
-      },
-      error: (errore: any) => {
-        console.log(errore);
-        window.alert("ERRORE: " + errore);
-      }
-    });
+  async ElencoRicette() {
+    try{
+      const dati = await fetch(this.API);
+      this.listaRicette = await dati.json();
+    }catch(error){
+      console.error(error);
+    }
   }
 
-  OttieniRicetta(id: string){
-    this.datastorage.getRequest(`ricette\\${id}`).subscribe({
-      next: (data: any) =>{
-        this.ricetta = data;
-      },
-      error: (errore: any) => {
-        console.error(errore);
-        window.alert("ERRORE: " + errore);
-      }
-    });
+  async OttieniRicetta(id: string){
+    try{
+      var js = await fetch(this.API + id);
+      var dato = await js.json();
+      const ricetta = new Ricette(
+        dato.id,
+        dato.nome,
+        dato.descrizione,
+        dato.ingredienti,
+        dato.preparazione,
+        dato.tempoTotale,
+        dato.difficolta,
+        dato.URLimmagine
+      );
+      return ricetta;
+
+    }catch(error){
+      console.error(error);
+      return error;
+    }
   }
 }

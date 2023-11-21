@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Ricette } from '../model/ricette';
-import { DataStorageService } from '../services/data-storage.service';
+import { RicetteServiceService } from '../services/ricette-service.service';
 
 @Component({
   selector: 'app-ricerca-component',
@@ -8,13 +8,11 @@ import { DataStorageService } from '../services/data-storage.service';
   styleUrls: ['./ricerca-component.component.css']
 })
 export class RicercaComponentComponent {
-  DBRicette : Ricette[] = [];
 
-  constructor(){
-    // this.DBRicette = 
+  constructor(public ricetteService :RicetteServiceService){
   }
 
   ricerca(query: string){
-    console.log(query);
+    this.ricetteService.OttieniRicetta(query);
   }
 }

@@ -1,22 +1,22 @@
 export class Ricette{
-    public id: number;
-    public name: string;
-    public descriction: string;
-    public ingredients: string[];
-    public steps: string[];
-    public totalTime: number;
-    public difficulty: string;
-    public imageURL: string;
+    public id: string;
+    public nome: string;
+    public descrizione: string;
+    public ingredienti: string[];
+    public preparazione: string[];
+    public tempoTotale: number;
+    public difficolta: string;
+    public URLimmagine: string;
 
-   constructor(id:number, name:string, descriction: string, ingredients:string[], steps:string[], totalTime:number, difficulty: string, imageURL:string){
+   constructor(id:string, nome:string, descrizione: string, ingredienti:string[], preparazione:string[], tempoTotale:number, difficolta: string, URLimmagine:string){
         this.id = id;
-        this.name = name;
-        this.descriction = descriction;
-        this.ingredients = ingredients;
-        this.steps = steps;
-        this.totalTime = totalTime;
-        this.difficulty = difficulty;
-        this.imageURL = imageURL;
+        this.nome = nome;
+        this.descrizione = descrizione;
+        this.ingredienti = ingredienti;
+        this.preparazione = preparazione;
+        this.tempoTotale = tempoTotale;
+        this.difficolta = difficolta;
+        this.URLimmagine = URLimmagine;
     }
    
 }

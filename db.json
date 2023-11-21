@@ -3,64 +3,65 @@
     [
     {
         "id": 1,
-        "name": "Crock Pot Roast",
-        "ingredients": [
+        "nome": "Crock Pot Roast",
+        "ingredienti": [
             {
-                "quantity": "1",
-                "name": " beef roast",
-                "type": "Meat"
+                "quantita": "1",
+                "nome": " beef roast",
+                "tipo": "Meat"
             },
             {
-                "quantity": "1 package",
-                "name": "brown gravy mix",
-                "type": "Baking"
+                "quantita": "1 package",
+                "nome": "brown gravy mix",
+                "tipo": "Baking"
             },
             {
-                "quantity": "1 package",
-                "name": "dried Italian salad dressing mix",
-                "type": "Condiments"
+                "quantita": "1 package",
+                "nome": "dried Italian salad dressing mix",
+                "tipo": "Condiments"
             },
             {
-                "quantity": "1 package",
-                "name": "dry ranch dressing mix",
-                "type": "Condiments"
+                "quantita": "1 package",
+                "nome": "dry ranch dressing mix",
+                "tipo": "Condiments"
             },
             {
-                "quantity": "1/2 cup",
-                "name": "water",
-                "type": "Drinks"
+                "quantita": "1/2 cup",
+                "nome": "water",
+                "tipo": "Drinks"
             }
         ],
-        "steps": [
+        "preparazione": [
             "Place beef roast in crock pot.",
             "Mix the dried mixes together in a bowl and sprinkle over the roast.",
             "Pour the water around the roast.",
             "Cook on low for 7-9 hours."
         ],
-        "totalTime": 40,
-        "difficulty": "medio",
-        "imageURL": "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/27/20/8/picVfzLZo.jpg"
+        "tempoTotale": 40,
+        "difficolta": "medio",
+        "URLimmagine": "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/27/20/8/picVfzLZo.jpg"
     },
     {
-        "name": "Roasted Asparagus",
-        "ingredients": [
+        "id": 2,
+        "nome": "Roasted Asparagus",
+        "ingredienti": [
             {
-                "quantity": "1 lb",
-                "name": " asparagus",
-                "type": "Produce"
+                "quantita": "1 lb",
+                "nome": " asparagus",
+                "tipo": "Produce"
             },
             {
-                "quantity": "1 1/2 tbsp",
-                "name": "olive oil",
-                "type": "Condiments"
+                "quantita": "1 1/2 tbsp",
+                "nome": "olive oil",
+                "tipo": "Condiments"
             },
             {
-                "quantity": "1/2 tsp",
-                "name": "kosher salt",
-                "type": "Baking"
+                "quantita": "1/2 tsp",
+                "nome": "kosher salt",
+                "tipo": "Baking"
             }
         ],
-        "steps": [
+        "preparazione": [
             "Preheat oven to 425°F.",
             "Cut off the woody bottom part of the asparagus spears and discard.",
             "With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.\",string.\", and if you eat asparagus you know what I mean by that).",
@@ -72,55 +73,56 @@
             "The tips of the spears will get very brown but watch them to prevent burning.",
             "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
         ],
-        "totalTime": 10,
-        "difficulty": "easy",
-        "imageURL": "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/50/84/7/picMcSyVd.jpg"
+        "tempoTotale": 10,
+        "difficolta": "facile",
+        "URLimmagine": "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/50/84/7/picMcSyVd.jpg"
     },
     {
-        "name": "Big Night Pizza",
-        "ingredients": [
+		"id": 3,
+        "nome": "Big Night Pizza",
+        "ingredienti": [
             {
-                "quantity": "5 teaspoons",
-                "name": "yeast",
-                "type": "Baking"
+                "quantita": "5 teaspoons",
+                "nome": "yeast",
+                "tipo": "Baking"
             },
             {
-                "quantity": "5 cups",
-                "name": "flour",
-                "type": "Baking"
+                "quantita": "5 cups",
+                "nome": "flour",
+                "tipo": "Baking"
             },
             {
-                "quantity": "4 tablespoons",
-                "name": "vegetable oil",
-                "type": "Baking"
+                "quantita": "4 tablespoons",
+                "nome": "vegetable oil",
+                "tipo": "Baking"
             },
             {
-                "quantity": "2 tablespoons",
-                "name": "sugar",
-                "type": "Baking"
+                "quantita": "2 tablespoons",
+                "nome": "sugar",
+                "tipo": "Baking"
             },
             {
-                "quantity": "2 teaspoons",
-                "name": "salt",
-                "type": "Baking"
+                "quantita": "2 teaspoons",
+                "nome": "salt",
+                "tipo": "Baking"
             },
             {
-                "quantity": "2 cups",
-                "name": "hot water",
-                "type": "Misc"
+                "quantita": "2 cups",
+                "nome": "hot water",
+                "tipo": "Misc"
             },
             {
-                "quantity": "1/4 cup",
-                "name": "pizza sauce",
-                "type": "Misc"
+                "quantita": "1/4 cup",
+                "nome": "pizza sauce",
+                "tipo": "Misc"
             },
             {
-                "quantity": "3/4 cup",
-                "name": "mozzarella cheese",
-                "type": "Dairy"
+                "quantita": "3/4 cup",
+                "nome": "mozzarella cheese",
+                "tipo": "Dairy"
             }
         ],
-        "steps": [
+        "preparazione": [
             "Add hot water to yeast in a large bowl and let sit for 15 minutes.",
             "Mix in oil, sugar, salt, and flour and let sit for 1 hour.",
             "Knead the dough and spread onto a pan.",
@@ -129,84 +131,86 @@
             "Bake at 400 deg Fahrenheit for 15 minutes.",
             "Enjoy!"
         ],
-        "totalTime": 90,
-        "difficulty": "difficile",
-        "imageURL": "http://upload.wikimedia.org/wikipedia/commons/c/c7/Spinach_pizza.jpg"
+        "tempoTotale": 90,
+        "difficolta": "difficile",
+        "URLimmagine": "http://upload.wikimedia.org/wikipedia/commons/c/c7/Spinach_pizza.jpg"
     },
     {
-        "name": "Cranberry and Apple Stuffed Acorn Squash Recipe",
-        "ingredients": [
+		"id": 4,
+        "nome": "Cranberry and Apple Stuffed Acorn Squash Recipe",
+        "ingredienti": [
             {
-                "quantity": "2",
-                "name": "acorn squash",
-                "type": "Produce"
+                "quantita": "2",
+                "nome": "acorn squash",
+                "tipo": "Produce"
             },
             {
-                "quantity": "1",
-                "name": "boiling water",
-                "type": "Drinks"
+                "quantita": "1",
+                "nome": "boiling water",
+                "tipo": "Drinks"
             },
             {
-                "quantity": "2",
-                "name": "apples chopped into 1.4 inch pieces",
-                "type": "Produce"
+                "quantita": "2",
+                "nome": "apples chopped into 1.4 inch pieces",
+                "tipo": "Produce"
             },
             {
-                "quantity": "1/2 cup",
-                "name": "dried cranberries",
-                "type": "Produce"
+                "quantita": "1/2 cup",
+                "nome": "dried cranberries",
+                "tipo": "Produce"
             },
             {
-                "quantity": "1 teaspoon",
-                "name": "cinnamon",
-                "type": "Baking"
+                "quantita": "1 teaspoon",
+                "nome": "cinnamon",
+                "tipo": "Baking"
             },
             {
-                "quantity": "2 tablespoons",
-                "name": "melted butter",
-                "type": "Dairy"
+                "quantita": "2 tablespoons",
+                "nome": "melted butter",
+                "tipo": "Dairy"
             }
         ],
-        "steps": [
+        "preparazione": [
             "Cut squash in half, remove seeds.",
             "Place squash in baking dish, cut-side down.",
             "Pour 1/4-inch water into dish.",
             "Bake for 30 minutes at 350 degrees F.",
-            "In large bowl, combine remaining ingredients.",
+            "In large bowl, combine remaining ingredienti.",
             "Remove squash from oven, fill with mix.",
             "Bake for 30-40 more minutes, until squash tender.",
             "Enjoy!"
         ],
-        "totalTime": 40,
-        "difficulty": "medio",
-        "imageURL": "http://elanaspantry.com/wp-content/uploads/2008/10/acorn_squash_with_cranberry.jpg",
+        "tempoTotale": 40,
+        "difficolta": "medio",
+        "URLimmagine": "http://elanaspantry.com/wp-content/uploads/2008/10/acorn_squash_with_cranberry.jpg",
         "originalURL": ""
     },
     {
-        "name": "Mic's Yorkshire Puds",
-        "ingredients": [
+		"id": 5,
+        "nome": "Mic's Yorkshire Puds",
+        "ingredienti": [
             {
-                "quantity": "200g",
-                "name": "plain flour",
-                "type": "Baking"
+                "quantita": "200g",
+                "nome": "plain flour",
+                "tipo": "Baking"
             },
             {
-                "quantity": "3",
-                "name": "eggs",
-                "type": "Dairy"
+                "quantita": "3",
+                "nome": "eggs",
+                "tipo": "Dairy"
             },
             {
-                "quantity": "300ml",
-                "name": "milk",
-                "type": "Dairy"
+                "quantita": "300ml",
+                "nome": "milk",
+                "tipo": "Dairy"
             },
             {
-                "quantity": "3 tbsp",
-                "name": "vegetable oil",
-                "type": "Condiments"
+                "quantita": "3 tbsp",
+                "nome": "vegetable oil",
+                "tipo": "Condiments"
             }
         ],
-        "steps": [
+        "preparazione": [
             "Put the flour and some seasoning into a large bowl.",
             "Stir in eggs, one at a time.",
             "Whisk in milk until you have a smooth batter.",
@@ -217,155 +221,157 @@
             "Ladle the batter mix into the tin.",
             "Bake for 30 minutes until well browned and risen."
         ],
-        "totalTime": 65,
-        "difficulty": "difficile",
-        "imageURL": "http://upload.wikimedia.org/wikipedia/commons/f/f9/Yorkshire_Pudding.jpg"
+        "tempoTotale": 65,
+        "difficolta": "difficile",
+        "URLimmagine": "http://upload.wikimedia.org/wikipedia/commons/f/f9/Yorkshire_Pudding.jpg"
     },
     {
-        "name": "Old-Fashioned Oatmeal Cookies",
-        "ingredients": [
+		"id": 6,
+        "nome": "Old-Fashioned Oatmeal Cookies",
+        "ingredienti": [
             {
-                "quantity": "1 cup",
-                "name": "raisins",
-                "type": "Produce"
+                "quantita": "1 cup",
+                "nome": "raisins",
+                "tipo": "Produce"
             },
             {
-                "quantity": "1",
-                "name": "cup water",
-                "type": "Drinks"
+                "quantita": "1",
+                "nome": "cup water",
+                "tipo": "Drinks"
             },
             {
-                "quantity": "3/4 cup",
-                "name": "shortening",
-                "type": "Baking"
+                "quantita": "3/4 cup",
+                "nome": "shortening",
+                "tipo": "Baking"
             },
             {
-                "quantity": "1 1/2 cups",
-                "name": "sugar",
-                "type": "Baking"
+                "quantita": "1 1/2 cups",
+                "nome": "sugar",
+                "tipo": "Baking"
             },
             {
-                "quantity": "2 1/2 cups",
-                "name": "flour",
-                "type": "Baking"
+                "quantita": "2 1/2 cups",
+                "nome": "flour",
+                "tipo": "Baking"
             },
             {
-                "quantity": "1 tsp.",
-                "name": "soda",
-                "type": "Baking"
+                "quantita": "1 tsp.",
+                "nome": "soda",
+                "tipo": "Baking"
             },
             {
-                "quantity": "1 tsp.",
-                "name": "salt",
-                "type": "Baking"
+                "quantita": "1 tsp.",
+                "nome": "salt",
+                "tipo": "Baking"
             },
             {
-                "quantity": "1 tsp.",
-                "name": "cinnamon",
-                "type": "Baking"
+                "quantita": "1 tsp.",
+                "nome": "cinnamon",
+                "tipo": "Baking"
             },
             {
-                "quantity": "1/2 tsp.",
-                "name": "baking powder",
-                "type": "Baking"
+                "quantita": "1/2 tsp.",
+                "nome": "baking powder",
+                "tipo": "Baking"
             },
             {
-                "quantity": "1/2 tsp.",
-                "name": "cloves",
-                "type": "Baking"
+                "quantita": "1/2 tsp.",
+                "nome": "cloves",
+                "tipo": "Baking"
             },
             {
-                "quantity": "2 cups",
-                "name": "oats",
-                "type": "Baking"
+                "quantita": "2 cups",
+                "nome": "oats",
+                "tipo": "Baking"
             },
             {
-                "quantity": "1/2 cup",
-                "name": "chopped nuts",
-                "type": "Baking"
+                "quantita": "1/2 cup",
+                "nome": "chopped nuts",
+                "tipo": "Baking"
             }
         ],
-        "steps": [
+        "preparazione": [
             "Simmer raisins and water over medium heat until raisins are plump, about 15 minutes.",
             "Drain raisins, reserving the liquid.",
             "Add enough water to reserved liquid to measure 1/2 cup.",
             "Heat oven to 400°.",
             "Mix thoroughly shortening, sugar, eggs and vanilla.",
             "Stir in reserved liquid.",
-            "Blend in remaining ingredients.",
+            "Blend in remaining ingredienti.",
             "Drop dough by rounded teaspoonfuls about 2 inches apart onto ungreased baking sheet.",
             "Bake 8 to 10 minutes or until light brown.",
             "About 6 1/2 dozen cookies."
         ],
-        "totalTime": 23,
-        "difficulty": "difficile",
-        "imageURL": "http://s3.amazonaws.com/gmi-digital-library/65caecf7-a8f7-4a09-8513-2659cf92871e.jpg"
+        "tempoTotale": 23,
+        "difficolta": "difficile",
+        "URLimmagine": "http://s3.amazonaws.com/gmi-digital-library/65caecf7-a8f7-4a09-8513-2659cf92871e.jpg"
     },
     {
-        "name": "Curried chicken salad",
-        "ingredients": [
+		"id": 7,
+        "nome": "Curried chicken salad",
+        "ingredienti": [
             {
-                "quantity": "3",
-                "name": "skinless, boneless chicken breasts, halved lengthwise",
-                "type": "Meat"
+                "quantita": "3",
+                "nome": "skinless, boneless chicken breasts, halved lengthwise",
+                "tipo": "Meat"
             },
             {
-                "quantity": "1/2 cup",
-                "name": "mayonnaise",
-                "type": "Baking"
+                "quantita": "1/2 cup",
+                "nome": "mayonnaise",
+                "tipo": "Baking"
             },
             {
-                "quantity": "1 tbsp",
-                "name": "lemon zest",
-                "type": "Produce"
+                "quantita": "1 tbsp",
+                "nome": "lemon zest",
+                "tipo": "Produce"
             },
             {
-                "quantity": "1 tbsp ",
-                "name": "lemon juice",
-                "type": "Produce"
+                "quantita": "1 tbsp ",
+                "nome": "lemon juice",
+                "tipo": "Produce"
             },
             {
-                "quantity": "1 1/2 tsp",
-                "name": "curry powder",
-                "type": "Baking"
+                "quantita": "1 1/2 tsp",
+                "nome": "curry powder",
+                "tipo": "Baking"
             },
             {
-                "quantity": "1/4 tsp",
-                "name": "salt",
-                "type": "Baking"
+                "quantita": "1/4 tsp",
+                "nome": "salt",
+                "tipo": "Baking"
             },
             {
-                "quantity": "2",
-                "name": "ripe mangoes, diced",
-                "type": "Produce"
+                "quantita": "2",
+                "nome": "ripe mangoes, diced",
+                "tipo": "Produce"
             },
             {
-                "quantity": "1/4 cup",
-                "name": "dried cranberries",
-                "type": "Produce"
+                "quantita": "1/4 cup",
+                "nome": "dried cranberries",
+                "tipo": "Produce"
             },
             {
-                "quantity": "2",
-                "name": "green onions, thinly sliced",
-                "type": "Produce"
+                "quantita": "2",
+                "nome": "green onions, thinly sliced",
+                "tipo": "Produce"
             },
             {
-                "quantity": "1",
-                "name": "celery stalk, finely chopped",
-                "type": "Produce"
+                "quantita": "1",
+                "nome": "celery stalk, finely chopped",
+                "tipo": "Produce"
             },
             {
-                "quantity": "6 leaves",
-                "name": "Boston lettuce",
-                "type": "Produce"
+                "quantita": "6 leaves",
+                "nome": "Boston lettuce",
+                "tipo": "Produce"
             },
             {
-                "quantity": "6",
-                "name": "English muffins, toasted",
-                "type": "Misc"
+                "quantita": "6",
+                "nome": "English muffins, toasted",
+                "tipo": "Misc"
             }
         ],
-        "steps": [
+        "preparazione": [
             "ARRANGE chicken in a single layer in a large pot.",
             "Add water to just cover.",
             "Bring to a boil over medium-high.",
@@ -376,9 +382,9 @@
             "Divide among muffins with lettuce leaves",
             "Sandwich with tops"
         ],
-        "totalTime": 6,
-        "difficulty": "facile",
-        "imageURL": "http://www.chatelaine.com/wp-content/uploads/2013/05/Curried-chicken-salad.jpg",
+        "tempoTotale": 6,
+        "difficolta": "facile",
+        "URLimmagine": "http://www.chatelaine.com/wp-content/uploads/2013/05/Curried-chicken-salad.jpg",
         "originalURL": "http://www.chatelaine.com/recipe/stovetop-cooking-method/curried-chicken-salad/"
     }
 ]
