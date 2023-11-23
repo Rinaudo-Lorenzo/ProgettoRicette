@@ -9,15 +9,18 @@ import { Ricette } from '../model/ricette';
   styleUrls: ['./dettagli-ricette-component.component.css']
 })
 export class DettagliRicetteComponentComponent {
-  id! :string;
+  ricetta! :Ricette;
 
-  constructor(private router: ActivatedRoute, private ricettaService:RicetteServiceService){  
-  }
+  constructor(private router: ActivatedRoute, private ricettaService:RicetteServiceService){  }
 
    async ngOnInit(){
       let id = this.router.snapshot.params['id'];
-      let ricetta = await this.ricettaService.OttieniRicetta(id);
-      console.log(ricetta);
+
+      try{
+        this.ricetta = await this.ricettaService.OttieniRicetta(id);    
+      }catch(error){
+        console.error(error)
+      }
    }
 
     

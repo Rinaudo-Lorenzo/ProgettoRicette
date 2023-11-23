@@ -22,25 +22,19 @@ export class RicetteServiceService {
     }
   }
 
-  async OttieniRicetta(id: string){
-    try{
-      var js = await fetch(this.API + id);
-      var dato = await js.json();
-      const ricetta = new Ricette(
-        dato.id,
-        dato.nome,
-        dato.descrizione,
-        dato.ingredienti,
-        dato.preparazione,
-        dato.tempoTotale,
-        dato.difficolta,
-        dato.URLimmagine
-      );
-      return ricetta;
-
-    }catch(error){
-      console.error(error);
-      return error;
-    }
+  async OttieniRicetta(id: string): Promise<Ricette>{
+    var js = await fetch(this.API + id);
+    var dato = await js.json();
+    const ricetta = new Ricette(
+      dato.id,
+      dato.nome,
+      dato.descrizione,
+      dato.ingredienti,
+      dato.preparazione,
+      dato.tempoTotale,
+      dato.difficolta,
+      dato.URLimmagine
+    );
+    return ricetta;
   }
 }

@@ -1,0 +1,26 @@
+<section class="py-5">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="row">
+                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 rounded" src="{{ricetta.URLimmagine}}" alt="..." /></div>
+                <div class="col-md-6">
+                    <h1 class="display-5 fw-bolder">{{ricetta.nome}}</h1>
+
+                    <p class="lead">{{ricetta.descrizione}}</p>
+
+                    <div class="fs-5 mb-3">Tempo di preparazione: {{ricetta.tempoTotale}}</div>
+                    <div class="fs-5 mb-3" [ngStyle]="{'textTrasform': 'capitalize'}">Difficoltà: {{ricetta.difficolta}}</div>
+                    
+                    <div class="fs-5 mb-3">Ingredienti:</div>
+                    <!-- <div class="fs-5 mb-3" *ngFor="let ingrediente of ricetta.ingredienti; index as i">{{ingrediente}}</div> -->
+                </div>
+            </div>
+            <div class="row rouded m-3">
+                <h1 class="display-5">Istruzioni per la preparazione</h1>
+                <div class="col-md-12">
+                    <p class="text-decoration-line" *ngFor="let passaggio of ricetta.preparazione; index as i">{{i+1}}. {{ricetta.preparazione[i]}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
