@@ -1,1 +1,14 @@
-@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Shadows+Into+Light&display=swap');
+
+*{
+    font-family: 'Shadow Into Light', cursive;
+    font-weight: 70;
+}
+
+h1, h5{
+    color: #5D422B;
+}
+
+h3{
+    color: #8c5827
+}
