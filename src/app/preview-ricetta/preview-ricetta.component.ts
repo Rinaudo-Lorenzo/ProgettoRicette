@@ -18,4 +18,12 @@ export class PreviewRicettaComponent {
   mostraDettagli($event: Event, id:string){
     this.router.navigate(['details', id]);
   }
+
+  cancellaRicetta(id:string){
+    
+  }
+
+  modificaRicetta($event: Event, id:string){
+    this.router.navigate(['modify', id])
+  }
 }

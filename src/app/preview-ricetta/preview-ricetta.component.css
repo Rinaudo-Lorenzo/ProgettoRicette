@@ -9,3 +9,8 @@ img{
 .id{
     display: none;
 }
+
+.menuRicetta > div{
+    cursor: pointer;
+    color: #000;
+}

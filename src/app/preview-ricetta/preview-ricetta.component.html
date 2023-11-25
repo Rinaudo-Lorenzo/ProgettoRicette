@@ -15,14 +15,23 @@
 
               <div class="d-flex justify-content-between card-text">
                 <p class="card-text"><span class="text-muted">Tempo di Esecuzione: {{ricetta.tempoTotale}} min</span></p>
-                <p class="d-flex">Difficoltà: {{ricetta.difficolta}} </p>
+                <p class="d-flex"><span class="text-muted">Difficoltà: {{ricetta.difficolta}}</span> </p>
               </div>
-              
             </div>
           </div>
     
         </div>
     
+    </div>
+    <div class="d-flex justify-content-end menuRicetta">
+      <div class="m-3" (click)="cancellaRicetta(ricetta.id)">
+        <i class="fa-solid fa-trash fa-xl" ></i>
+      </div>
+
+      <div class="m-3" (click)="modificaRicetta($event, ricetta.id)">
+        <i class="fa-solid fa-pencil fa-xl"></i>
+      </div>
+
     </div>
     <hr>
 </div>
