@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RicetteServiceService } from '../services/ricette-service.service';
 import { Router } from "@angular/router";
+import { Ricette } from '../model/ricette';
 
 @Component({
   selector: 'app-preview-ricetta',
@@ -19,8 +20,9 @@ export class PreviewRicettaComponent {
     this.router.navigate(['details', id]);
   }
 
-  cancellaRicetta(id:string){
-    
+  async cancellaRicetta(id:string){
+    await this.ricetteservice.eliminaRicetta(id);
+    await this.ricetteservice.ElencoRicette();
   }
 
   modificaRicetta($event: Event, id:string){

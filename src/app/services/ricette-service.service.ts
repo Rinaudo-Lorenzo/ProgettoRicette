@@ -37,4 +37,19 @@ export class RicetteServiceService {
     );
     return ricetta;
   }
+
+  modificaRicetta(ricetta: Ricette){
+    this.datastorage.PutRequest(`${ricetta.id}`, ricetta); //controllare url
+  }
+
+  eliminaRicetta(id:string){
+    fetch(`${this.API}/${id}`, {
+      method: 'DELETE'
+    })
+      // .then(response => response.json())
+      // .then((ricetta: any) => {
+      //   c
+        
+      // });
+  }
 }

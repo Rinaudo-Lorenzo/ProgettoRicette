@@ -15,14 +15,28 @@
             </div>
             <div class="row rouded mt-5">
                 <div class="col-md-6">
-                    <h3 class="display-5 text-center">Ingredienti</h3>
-                    <input class="form-control" type="text" >
+                    <h3 class="display-5 text-center mb-3">Ingredienti</h3>
+
+                    <div *ngFor="let ingrediente of ricetta.ingredienti" class="col-md-12 d-flex justify-content-around">
+                        <div class="col-md-6">
+                            <input class="form-control text-center me-3" id="inputQuantity" type="num" [value]="ingrediente.quantita" />
+                        </div>
+                        <div class="col-md-6">
+                            <input class="form-control" type="text"  name="txta" [value]="ingrediente.nome">
+                        </div>
+                    </div>
+
                 </div>
                 <div class="col-md-6">
-                    <h3 class="display-5 text-center">Istruzioni per la preparazione</h3>
-                    <input class="form-control" type="text" >
+                    <h3 class="display-5 text-center mb-3">Preparazione</h3>
+
+                    <div *ngFor="let step of ricetta.preparazione">
+                        <input class="form-control" type="text"  name="txta" [value]="step">
+                    </div>
                 </div>              
             </div>
         </div>
+
+        <button class="btn btn-primary">Esegui</button>
     </div>
 </section>

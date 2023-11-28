@@ -5,20 +5,20 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataStorageService {
-  private API_SERVER = "http://localhost:3000/";
+  private API_SERVER = "http://localhost:3000/ricette";
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   public getRequest(endpoint: string){
-    return this.httpClient.get(this.API_SERVER + endpoint);
+    return this.http.get(this.API_SERVER + endpoint);
   }
   public PostRequest(endpoint: string, body: any){
-  return this.httpClient.post(this.API_SERVER+endpoint,body);
+  return this.http.post(this.API_SERVER+endpoint,body);
   }
   public PutRequest(endpoint: string, body: any){
-  return this.httpClient.put(this.API_SERVER+endpoint,body);
+  return this.http.put(this.API_SERVER+endpoint,body);
   }
   public DeleteRequest(endpoint: string){
-  return this.httpClient.delete(this.API_SERVER+endpoint);
+  return this.http.delete(this.API_SERVER+ "//" + endpoint);
   }
 }

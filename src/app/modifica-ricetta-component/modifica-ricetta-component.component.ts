@@ -22,4 +22,6 @@ export class ModificaRicettaComponentComponent {
       console.error(error)
     }
  }
+  // this.ricetteservice.modificaRicetta(this.ricetta);
+
 }
