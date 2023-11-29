@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Ricette } from '../model/ricette';
 import { RicetteServiceService } from '../services/ricette-service.service';
+import { Ingrediente } from '../model/ingrediente';
 
 @Component({
   selector: 'app-ricerca-component',
@@ -12,17 +13,26 @@ export class RicercaComponentComponent {
   constructor(public ricetteService :RicetteServiceService){
   }
 
-  cercaRicetta(query: string){
+  cercaRicetta(nomeRicetta: string, nomeIngrediente: string){
     // this.ricetteService.ElencoRicette();
 
-    if(query.length != 0){
-      console.log(this.ricetteService.listaRicette);
-      console.log(query);
-      this.ricetteService.listaRicette = this.ricetteService.listaRicette.filter((ricetta) => ricetta.nome.includes(query.toUpperCase()));
-      console.log(this.ricetteService.listaRicette);
+    if(nomeRicetta.length != 0 || nomeIngrediente.length != 0){
+      
+      this.ricetteService.listaRicette = this.ricetteService.listaRicette.filter((ricetta) => 
+          {
+            if(nomeRicetta.length != 0 && nomeIngrediente.length == 0){
+              return ricetta.nome.includes(nomeRicetta.toUpperCase());
+
+            }else if (nomeRicetta.length == 0 && nomeIngrediente.length != 0){
+              return ricetta.ingredienti.some((ingrediente) => ingrediente.nome.toUpperCase().includes(nomeIngrediente.toUpperCase()));
+
+            }else{
+              return ricetta.nome.includes(nomeRicetta.toUpperCase()) &&  ricetta.ingredienti.some((ingrediente) => ingrediente.nome.toUpperCase().includes(nomeIngrediente.toUpperCase()))  
+            }      
+          });
+        
     }else{
       this.ricetteService.ElencoRicette();
-      console.log("query vuota " + this.ricetteService.listaRicette);
     }
    
   }

@@ -39,17 +39,25 @@ export class RicetteServiceService {
   }
 
   modificaRicetta(ricetta: Ricette){
-    this.datastorage.PutRequest(`${ricetta.id}`, ricetta); //controllare url
+    
+    fetch(`http://localhost:3000/ricette/${ricetta.id}`)
+    .then(response => response.json())
+    .then(data => {
+      // Modifica il campo desiderato
+      data = ricetta;
+
+      // Effettua una richiesta PATCH per aggiornare l'elemento nel server
+      return fetch(`http://localhost:3000/ricette/${ricetta.id}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+    })
   }
 
   eliminaRicetta(id:string){
-    fetch(`${this.API}/${id}`, {
-      method: 'DELETE'
-    })
-      // .then(response => response.json())
-      // .then((ricetta: any) => {
-      //   c
-        
-      // });
+    fetch(`${this.API}/${id}`, { method: 'DELETE' });      
   }
 }

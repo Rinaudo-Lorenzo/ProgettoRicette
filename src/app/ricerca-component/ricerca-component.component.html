@@ -1,10 +1,15 @@
 <div class="container position-relative text-center">
     <img class="img-fluid m-2 rounded" src="../assets/img/logo.png">
     <div class="row justify-content-center">
-      <div class="d-flex">
+      <div class="d-flex mb-2">
         <input class="form-control form-control-lg" type="search" placeholder="Cerca una ricetta.." aria-label="Search" 
-            #txtRicerca name="nome" (keyup)="cercaRicetta(txtRicerca.value)">
-        <button class="btn btn-outline-danger" (click)="cercaRicetta(txtRicerca.value)">Cerca</button> 
+            #txtRicercaNome name="nome" (keydown)="cercaRicetta(txtRicercaNome.value, txtRicercaIngrediente.value)">
+        <button class="btn btn-outline-danger" (click)="cercaRicetta(txtRicercaNome.value, txtRicercaIngrediente.value)">Cerca</button> 
+      </div>  
+      <div class="d-flex mb-2">
+        <input class="form-control form-control-lg" type="search" placeholder="Cerca un ingrediente.." aria-label="Search" 
+            #txtRicercaIngrediente name="nome" (keydown)="cercaRicetta(txtRicercaNome.value, txtRicercaIngrediente.value)">
+        <button class="btn btn-outline-danger" (click)="cercaRicetta(txtRicercaNome.value, txtRicercaIngrediente.value)">Cerca</button> 
       </div>  
     </div>
   
