@@ -1,3 +1,338 @@
 {
-  "ricette": []
+  "ricette": [
+    {
+      "id": 1,
+      "nome": "ARROSTO IN CROCK POT",
+      "ingredienti": [
+        {
+          "quantita": "1",
+          "nome": "arrosto di manzo"
+        },
+        {
+          "quantita": "1 confezione",
+          "nome": "mix di salsa bruna"
+        },
+        {
+          "quantita": "1 confezione",
+          "nome": "mix per condimento per insalata italiana essiccato"
+        },
+        {
+          "quantita": "1 confezione",
+          "nome": "mix per condimento ranch essiccato"
+        },
+        {
+          "quantita": "1/2 tazza",
+          "nome": "acqua"
+        }
+      ],
+      "preparazione": [
+        "Posizionare l'arrosto di manzo nella pentola Crock Pot.",
+        "Mescolare insieme i mix essiccati in una ciotola e cospargere sull'arrosto.",
+        "Versare l'acqua intorno all'arrosto.",
+        "Cuocere a fuoco lento per 7-9 ore."
+      ],
+      "tempoTotale": 40,
+      "difficolta": "medio",
+      "URLimmagine": "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/27/20/8/picVfzLZo.jpg"
+    },
+    {
+      "id": 2,
+      "nome": "ASPARAGI ARROSTITI",
+      "ingredienti": [
+        {
+          "quantita": "1 lb",
+          "nome": "asparagi"
+        },
+        {
+          "quantita": "1 1/2 cucchiai",
+          "nome": "olio d'oliva"
+        },
+        {
+          "quantita": "1/2 cucchiaino",
+          "nome": "sale kosher"
+        }
+      ],
+      "preparazione": [
+        "Preriscalda il forno a 425°F (circa 220°C).",
+        "Taglia la parte legnosa in fondo agli steli degli asparagi e scartala.",
+        "Con un pelapatate, togli la pelle nelle ultime 2-3 pollici degli steli (questo impedisce agli asparagi di risultare fibrosi, e se mangi gli asparagi, sai cosa intendo).",
+        "Disponi gli asparagi su una teglia foderata di carta stagnola e condiscili con l'olio d'oliva.",
+        "Cospargili di sale.",
+        "Con le mani, girali finché non sono uniformemente ricoperti di olio e sale.",
+        "Cuoci in forno per 10-15 minuti, a seconda dello spessore degli steli e del grado di tenerezza desiderato.",
+        "Dovrebbero risultare teneri quando vengono forati con la punta di un coltello.",
+        "Le punte degli steli diventeranno molto scure, ma stai attento a evitare che si brucino.",
+        "Sono ottimi da soli, ma a volte li servo con una leggera vinaigrette se abbiamo bisogno di qualcosa di acido per bilanciare il pasto."
+      ],
+      "tempoTotale": 10,
+      "difficolta": "facile",
+      "URLimmagine": "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/50/84/7/picMcSyVd.jpg"
+    },
+    {
+      "id": 3,
+      "nome": "BIG NIGHT PIZZA",
+      "ingredienti": [
+        {
+          "quantita": "5 teaspoons",
+          "nome": "yeast"
+        },
+        {
+          "quantita": "5 cups",
+          "nome": "flour"
+        },
+        {
+          "quantita": "4 tablespoons",
+          "nome": "vegetable oil"
+        },
+        {
+          "quantita": "2 tablespoons",
+          "nome": "sugar"
+        },
+        {
+          "quantita": "2 teaspoons",
+          "nome": "salt"
+        },
+        {
+          "quantita": "2 cups",
+          "nome": "hot water"
+        },
+        {
+          "quantita": "1/4 cup",
+          "nome": "pizza sauce"
+        },
+        {
+          "quantita": "3/4 cup",
+          "nome": "mozzarella cheese"
+        }
+      ],
+      "preparazione": [
+        "Add hot water to yeast in a large bowl and let sit for 15 minutes.",
+        "Mix in oil, sugar, salt, and flour and let sit for 1 hour.",
+        "Knead the dough and spread onto a pan.",
+        "Spread pizza sauce and sprinkle cheese.",
+        "Add any optional toppings as you wish.",
+        "Bake at 400 deg Fahrenheit for 15 minutes.",
+        "Enjoy!"
+      ],
+      "tempoTotale": 90,
+      "difficolta": "difficile",
+      "URLimmagine": "http://upload.wikimedia.org/wikipedia/commons/c/c7/Spinach_pizza.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "RICETTA DI ZUCCA RIPIENA CON MIRTILLI ROSSI E MELE",
+      "ingredienti": [
+        {
+          "quantita": "2",
+          "nome": "zucche di tipo acorn"
+        },
+        {
+          "quantita": "1",
+          "nome": "acqua bollente"
+        },
+        {
+          "quantita": "2",
+          "nome": "mele tagliate a pezzi di 1,4 pollici"
+        },
+        {
+          "quantita": "1/2 tazza",
+          "nome": "mirtilli rossi essiccati"
+        },
+        {
+          "quantita": "1 cucchiaino",
+          "nome": "cannella"
+        },
+        {
+          "quantita": "2 cucchiai",
+          "nome": "burro fuso"
+        }
+      ],
+      "preparazione": [
+        "Taglia le zucche a metà e rimuovi i semi.",
+        "Posiziona le zucche in una teglia da forno, con il lato tagliato rivolto verso il basso.",
+        "Versa 1/4 di pollice d'acqua nella teglia.",
+        "Cuoci in forno per 30 minuti a 350 gradi Fahrenheit.",
+        "In una ciotola grande, combina gli ingredienti rimanenti.",
+        "Togli le zucche dal forno e riempile con il misto.",
+        "Cuoci in forno per altri 30-40 minuti, fino a quando la zucca è tenera.",
+        "Buon appetito!"
+      ],
+      "tempoTotale": 40,
+      "difficolta": "medio",
+      "URLimmagine": "http://elanaspantry.com/wp-content/uploads/2008/10/acorn_squash_with_cranberry.jpg"
+    },
+    {
+      "id": 5,
+      "nome": "PUDDING DELLO YORKSHIRE DI MIC",
+      "ingredienti": [
+        {
+          "quantita": "200g",
+          "nome": "farina bianca"
+        },
+        {
+          "quantita": "3",
+          "nome": "uova"
+        },
+        {
+          "quantita": "300ml",
+          "nome": "latte"
+        },
+        {
+          "quantita": "3 cucchiai",
+          "nome": "olio vegetale"
+        }
+      ],
+      "preparazione": [
+        "Metti la farina e un po' di condimento in una ciotola grande.",
+        "Mescola le uova, una alla volta.",
+        "Monta il latte fino a ottenere un impasto liscio.",
+        "Lascia riposare in frigorifero per almeno 30 minuti.",
+        "Preriscalda il forno a 220°C/gas mark 7.",
+        "Versa l'olio nei buchi di una teglia per muffin da 8 buchi.",
+        "Scalda la teglia in forno per 5 minuti.",
+        "Versa l'impasto nella teglia usando un mestolo.",
+        "Inforna per 30 minuti finché non è ben dorato e gonfio."
+      ],
+      "tempoTotale": 65,
+      "difficolta": "difficile",
+      "URLimmagine": "http://upload.wikimedia.org/wikipedia/commons/f/f9/Yorkshire_Pudding.jpg"
+    },
+    {
+      "id": 6,
+      "nome": "BISCOTTI ALL'AVENA VECCHIO STILE",
+      "ingredienti": [
+        {
+          "quantita": "1 tazza",
+          "nome": "uvette"
+        },
+        {
+          "quantita": "1 tazza",
+          "nome": "acqua"
+        },
+        {
+          "quantita": "3/4 tazza",
+          "nome": "strutto"
+        },
+        {
+          "quantita": "1 1/2 tazze",
+          "nome": "zucchero"
+        },
+        {
+          "quantita": "2 1/2 tazze",
+          "nome": "farina"
+        },
+        {
+          "quantita": "1 cucchiaino",
+          "nome": "bicarbonato di sodio"
+        },
+        {
+          "quantita": "1 cucchiaino",
+          "nome": "sale"
+        },
+        {
+          "quantita": "1 cucchiaino",
+          "nome": "cannella"
+        },
+        {
+          "quantita": "1/2 cucchiaino",
+          "nome": "lievito in polvere"
+        },
+        {
+          "quantita": "1/2 cucchiaino",
+          "nome": "chiodi di garofano"
+        },
+        {
+          "quantita": "2 tazze",
+          "nome": "avena"
+        },
+        {
+          "quantita": "1/2 tazza",
+          "nome": "noci tritate"
+        }
+      ],
+      "preparazione": [
+        "Fai sobbollire le uvetta e l'acqua a fuoco medio fino a quando le uvetta sono gonfie, circa 15 minuti.",
+        "Scola le uvetta, conservando il liquido.",
+        "Aggiungi abbastanza acqua al liquido conservato per misurare 1/2 tazza.",
+        "Scalda il forno a 200°C.",
+        "Mescola bene lo strutto, lo zucchero, le uova e la vaniglia.",
+        "Aggiungi il liquido conservato.",
+        "Mescola gli ingredienti rimanenti.",
+        "Disponi l'impasto con cucchiai da tè rotondi a circa 5 centimetri di distanza su una teglia non unta.",
+        "Inforna per 8-10 minuti o fino a quando sono leggermente dorati.",
+        "Circa 6 1/2 dozzine di biscotti."
+      ],
+      "tempoTotale": 23,
+      "difficolta": "difficile",
+      "URLimmagine": "http://s3.amazonaws.com/gmi-digital-library/65caecf7-a8f7-4a09-8513-2659cf92871e.jpg"
+    },
+    {
+      "id": 7,
+      "nome": "INSALATA DI POLLO AL CURRY",
+      "ingredienti": [
+        {
+          "quantita": "3",
+          "nome": "petti di pollo senza pelle e senza ossa, tagliati a metà per lungo"
+        },
+        {
+          "quantita": "1/2 tazza",
+          "nome": "maionese"
+        },
+        {
+          "quantita": "1 cucchiaio",
+          "nome": "scorza di limone"
+        },
+        {
+          "quantita": "1 cucchiaio",
+          "nome": "succo di limone"
+        },
+        {
+          "quantita": "1 1/2 cucchiaini",
+          "nome": "curry in polvere"
+        },
+        {
+          "quantita": "1/4 cucchiaino",
+          "nome": "sale"
+        },
+        {
+          "quantita": "2",
+          "nome": "manghi maturi, tagliati a dadini"
+        },
+        {
+          "quantita": "1/4 tazza",
+          "nome": "mirtilli rossi essiccati"
+        },
+        {
+          "quantita": "2",
+          "nome": "cipollotti, tagliati sottilmente"
+        },
+        {
+          "quantita": "1",
+          "nome": "gambo di sedano, finemente tritato"
+        },
+        {
+          "quantita": "6 foglie",
+          "nome": "lattuga Boston"
+        },
+        {
+          "quantita": "6",
+          "nome": "muffin inglesi, tostati"
+        }
+      ],
+      "preparazione": [
+        "DISPORRE il pollo in uno strato singolo in una pentola grande.",
+        "Aggiungere acqua fino a coprire appena il pollo.",
+        "Portare a ebollizione a fuoco medio-alto.",
+        "Capovolgere il pollo, ridurre il calore a medio e cuocere a fuoco lento fino a cottura completa, circa altri 6 minuti.",
+        "Raffreddare.",
+        "MESCOLARE la maionese con la scorza di limone, il succo di limone, il curry e il sale in una ciotola grande.",
+        "Usando 2 forchette, sfilacciare il pollo, quindi mescolarlo nella miscela di maionese con mango, mirtilli rossi, cipollotti e sedano.",
+        "Dividere tra i muffin con foglie di lattuga.",
+        "Fare un panino con i coperchi."
+      ],
+      "tempoTotale": 6,
+      "difficolta": "facile",
+      "URLimmagine": "http://www.chatelaine.com/wp-content/uploads/2013/05/Curried-chicken-salad.jpg"
+    }
+  ]
 }

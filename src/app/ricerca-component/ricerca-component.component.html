@@ -2,9 +2,10 @@
     <img class="img-fluid m-2 rounded" src="../assets/img/logo.png">
     <div class="row justify-content-center">
       <div class="d-flex">
-        <input class="form-control form-control-lg" type="search" placeholder="Cerca una ricetta.." aria-label="Search" #txtRicerca name="nome">
-        <button class="btn btn-outline-danger" (click)="ricerca(txtRicerca.value)">Cerca</button> 
-      </div>
+        <input class="form-control form-control-lg" type="search" placeholder="Cerca una ricetta.." aria-label="Search" 
+            #txtRicerca name="nome" (keyup)="cercaRicetta(txtRicerca.value)">
+        <button class="btn btn-outline-danger" (click)="cercaRicetta(txtRicerca.value)">Cerca</button> 
+      </div>  
     </div>
   
     <app-preview-ricetta></app-preview-ricetta>

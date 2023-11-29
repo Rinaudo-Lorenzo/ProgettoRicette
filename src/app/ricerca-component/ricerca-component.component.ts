@@ -12,7 +12,18 @@ export class RicercaComponentComponent {
   constructor(public ricetteService :RicetteServiceService){
   }
 
-  ricerca(query: string){
-    this.ricetteService.OttieniRicetta(query);
+  cercaRicetta(query: string){
+    // this.ricetteService.ElencoRicette();
+
+    if(query.length != 0){
+      console.log(this.ricetteService.listaRicette);
+      console.log(query);
+      this.ricetteService.listaRicette = this.ricetteService.listaRicette.filter((ricetta) => ricetta.nome.includes(query.toUpperCase()));
+      console.log(this.ricetteService.listaRicette);
+    }else{
+      this.ricetteService.ElencoRicette();
+      console.log("query vuota " + this.ricetteService.listaRicette);
+    }
+   
   }
 }
