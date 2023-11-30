@@ -67,8 +67,8 @@ export class RicetteServiceService {
   inserimentoRicetta(ricetta: Ricette){
     fetch(this.API+ricetta.id,
       {
-        method: 'POST',
-        headers: {'content-type': 'application/json'},
+        method: 'PUT',
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(ricetta)
       })
     .then(response => response.json())

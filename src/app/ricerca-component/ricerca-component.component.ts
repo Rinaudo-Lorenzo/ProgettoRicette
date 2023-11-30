@@ -21,7 +21,7 @@ export class RicercaComponentComponent {
       this.ricetteService.listaRicette = this.ricetteService.listaRicette.filter((ricetta) => 
           {
             if(nomeRicetta.length != 0 && nomeIngrediente.length == 0){
-              return ricetta.nome.includes(nomeRicetta.toUpperCase());
+              return ricetta.nome.toUpperCase().includes(nomeRicetta.toUpperCase());
 
             }else if (nomeRicetta.length == 0 && nomeIngrediente.length != 0){
               return ricetta.ingredienti.some((ingrediente) => ingrediente.nome.toUpperCase().includes(nomeIngrediente.toUpperCase()));

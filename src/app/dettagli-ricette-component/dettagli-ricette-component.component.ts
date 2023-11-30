@@ -30,5 +30,18 @@ export class DettagliRicetteComponentComponent {
 
    }
 
+   cambioPersone(event: Event){
+    const value = (event.target as HTMLInputElement).value;
+    this.numeroPersone = parseInt(value);
+
+    for(let i = 0; i< this.ricetta.ingredienti.length; i++)
+      this.ricetta.ingredienti[i].quantita = this.printAmount(this.ricetta.ingredienti[i].quantita); 
+  }
+
+  printAmount(quantita: string){
+    const [amountValue, amountUnit] = quantita.split(/(\d+)/).filter(Boolean);
+    return (parseInt(amountValue) * this.numeroPersone) + amountUnit;
+  }
+
     
 }

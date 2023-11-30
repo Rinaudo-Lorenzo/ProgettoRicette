@@ -84,6 +84,9 @@ export class ModificaRicettaComponentComponent {
 
       }
 
+    }else{
+      this.ricetta.preparazione =  [];
+      this.ricetta.ingredienti = [];
     }
   }
 

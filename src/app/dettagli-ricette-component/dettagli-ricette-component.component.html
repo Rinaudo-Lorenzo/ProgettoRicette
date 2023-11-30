@@ -17,7 +17,7 @@
                 <div class="col-md-6">
                     <h3 class="display-5 text-center">Ingredienti</h3>
                     <p class="text-decoration-line fs-5" *ngFor="let ingrediente of ricetta.ingredienti; index as i">{{ricetta.ingredienti[i].quantita}} {{ricetta.ingredienti[i].nome}}</p>
-                    <p class="d-flex mt-5">Dosi <input class="form-control text-center me-3" id="inputQuantity" type="number" min="1" [value]="numeroPersone" #NumeroPersone /> Persone</p>
+                    <p class="d-flex mt-5">Dosi <input class="form-control text-center me-3" id="inputQuantity" type="number" min="1" value="1" #NumeroPersone (change)="cambioPersone($event)"/> Persone</p>
                 </div>
                 <div class="col-md-6">
                     <h3 class="display-5 text-center">Istruzioni per la preparazione</h3>

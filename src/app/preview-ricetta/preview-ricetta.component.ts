@@ -23,8 +23,8 @@ export class PreviewRicettaComponent {
   }
 
    async cancellaRicetta(id:string){
-     this.ricetteservice.eliminaRicetta(id);
-     await this.ricetteservice.ElencoRicette();
+     await this.ricetteservice.eliminaRicetta(id);
+     this.ricetteservice.ElencoRicette();
   }
 
   modificaRicetta($event: Event, id:string){
