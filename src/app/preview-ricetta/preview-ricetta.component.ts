@@ -9,7 +9,9 @@ import { Ricette } from '../model/ricette';
   styleUrls: ['./preview-ricetta.component.css']
 })
 export class PreviewRicettaComponent {
-  constructor(public ricetteservice: RicetteServiceService, private readonly router: Router){  }    
+  constructor(public ricetteservice: RicetteServiceService, private readonly router: Router){
+    this.ricetteservice.ElencoRicette();
+    }    
 
   ngOnInit(): void {
     this.ricetteservice.ElencoRicette();
@@ -20,12 +22,18 @@ export class PreviewRicettaComponent {
     this.router.navigate(['details', id]);
   }
 
-  async cancellaRicetta(id:string){
-    await this.ricetteservice.eliminaRicetta(id);
-    await this.ricetteservice.ElencoRicette();
+   async cancellaRicetta(id:string){
+     this.ricetteservice.eliminaRicetta(id);
+     await this.ricetteservice.ElencoRicette();
   }
 
   modificaRicetta($event: Event, id:string){
-    this.router.navigate(['modify', id])
+   
+    this.router.navigate(['modify', id]);
   }
+
+  inserisciRicetta(){
+    this.router.navigate(['modify', ""]);
+  }
+
 }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { DataStorageService } from './data-storage.service';
 import { Ricette } from '../model/ricette';
+import { JsonPipe } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -40,14 +41,14 @@ export class RicetteServiceService {
 
   modificaRicetta(ricetta: Ricette){
     
-    fetch(`http://localhost:3000/ricette/${ricetta.id}`)
+    fetch(`${this.API}${ricetta.id}`)
     .then(response => response.json())
     .then(data => {
       // Modifica il campo desiderato
       data = ricetta;
 
       // Effettua una richiesta PATCH per aggiornare l'elemento nel server
-      return fetch(`http://localhost:3000/ricette/${ricetta.id}`, {
+      return fetch(`${this.API}${ricetta.id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -58,6 +59,22 @@ export class RicetteServiceService {
   }
 
   eliminaRicetta(id:string){
-    fetch(`${this.API}/${id}`, { method: 'DELETE' });      
+    fetch(`${this.API}${id}`, {
+       method: 'DELETE' 
+      });      
+  }
+
+  inserimentoRicetta(ricetta: Ricette){
+    fetch(this.API+ricetta.id,
+      {
+        method: 'POST',
+        headers: {'content-type': 'application/json'},
+        body: JSON.stringify(ricetta)
+      })
+    .then(response => response.json())
+    .then (data => 
+        ricetta.id = 
+        data += ricetta
+      )
   }
 }

@@ -1,3 +1,6 @@
+<div class="m-5">
+  <button class="btn btn-dark" (click)="inserisciRicetta()"><i class="fa-solid fa-plus" style="color: white;"></i> Ricetta</button>
+</div>
 <div class="mt-5" *ngFor="let ricetta of ricetteservice.listaRicette">
     <div class="card border-0" (click)="mostraDettagli($event, ricetta.id)">
 

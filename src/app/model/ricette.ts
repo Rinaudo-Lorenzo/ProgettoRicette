@@ -6,11 +6,11 @@ export class Ricette{
     public descrizione: string;
     public ingredienti: Ingrediente [];
     public preparazione: string[];
-    public tempoTotale: number;
+    public tempoTotale: string;
     public difficolta: string;
     public URLimmagine: string;
 
-   constructor(id:string, nome:string, descrizione: string, ingredienti:Ingrediente[], preparazione:string[], tempoTotale:number, difficolta: string, URLimmagine:string){
+   constructor(id:string, nome:string, descrizione: string, ingredienti:Ingrediente[], preparazione:string[], tempoTotale:string, difficolta: string, URLimmagine:string){
         this.id = id;
         this.nome = nome;
         this.descrizione = descrizione;

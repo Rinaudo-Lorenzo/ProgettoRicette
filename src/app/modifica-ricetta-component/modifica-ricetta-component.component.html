@@ -1,23 +1,28 @@
-"<section class="py-5">
+<section class="py-5" id="top">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
 
             <div class="row col-md-12">
                 <div class="col-md-6">
-                    <p class="fs-5 mb-3">Nome ricetta: </p><input class="form-control text-center me-3" id="inputQuantity" type="num" [value]="ricetta.nome" />
+                    <p class="fs-5 mb-3">Nome ricetta: </p><input class="form-control text-center me-3" id="inputQuantity" type="num" [value]="ricetta.nome" #TxtNomeRicetta/>
 
-                    <p class="fs-5 mb-2">Immagine:</p>
-                    <img src="{{ricetta.URLimmagine}}" ngClass="img-fluid mb-3" alt="" srcset="">
-                    <div class="input-group">
-                        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                    
+                    <div class="mt-3 mb-3">
+                        <p class="fs-5 mb-2">Immagine:</p>
+                        <img src="{{ricetta.URLimmagine}}" ngClass="img-fluid mb-3" alt="" srcset="">
+                        <input class="form-control text-center me-3" id="inputQuantity" type="num" [value]="ricetta.URLimmagine" #TxturlImmagine/>
                     </div>
-                      
-                    <p class="lead mb-3 mt-3"></p>
+                    
+                    <div class="mb-3">
+                        <p class="fs-5 mb-2">Descrizione:</p>
+                        <textarea class="lead mb-3 mt-3 w-100" #TxtDescrizione [value]="ricetta.descrizione"></textarea>
+                        
+                    </div>
                 </div>
                 
                 <div class="col-md-6">
-                    <p class="fs-5 mb-3"><i class="fa-regular fa-clock" style="color: #8c5827;"></i>  Tempo di preparazione: <input class="form-control text-center me-3" id="inputQuantity" type="num" [value]="ricetta.tempoTotale" /></p>
-                    <p class="fs-5 mb-3"><i class="fa-solid fa-sliders" style="color: #8c5827;"></i>  Difficoltà: <input class="form-control text-center me-3" id="inputQuantity" type="num" [value]="ricetta.difficolta" /></p>
+                    <p class="fs-5 mb-3"><i class="fa-regular fa-clock" style="color: #8c5827;"></i>  Tempo di preparazione: <input class="form-control text-center me-3" id="inputQuantity" type="number" min="1" [value]="ricetta.tempoTotale" #TxtTempoPreparazione /></p>
+                    <p class="fs-5 mb-3"><i class="fa-solid fa-sliders" style="color: #8c5827;"></i>  Difficoltà: <input class="form-control text-center me-3" id="inputQuantity" type="num" [value]="ricetta.difficolta" #TxtDifficolta /></p>
                 </div>
                 
                 
@@ -35,10 +40,10 @@
 
                     <div *ngFor="let ingrediente of ricetta.ingredienti" class="col-md-12 d-flex mt-2">
                         <div class="col-md-12 d-flex justify-content-around">
-                            <input class="form-control me-3" id="inputQuantity" type="num" [value]="ingrediente.quantita" />
-                            <input class="form-control" type="text"  [value]="ingrediente.nome" >
+                            <input class="form-control me-3" id="inputQuantity" type="num" [value]="ingrediente.quantita" disabled/>
+                            <input class="form-control" type="text"  [value]="ingrediente.nome" disabled>
 
-                            <div class="cliccable" (click)="eliminaIngrediente(ingrediente.nome)"><i class="fa-solid fa-trash fa-lg lh-lg"></i></div>                         
+                            <div class="cliccable m-2" (click)="eliminaIngrediente(ingrediente.nome)"><i class="fa-solid fa-trash fa-lg lh-lg"></i></div>                         
                         </div>
                     </div>
 
@@ -53,14 +58,18 @@
                         <button class="btn btn-success" (click)="aggiungiStepPreparazione(txtStep.value)"><b>+</b></button>
                     </div>
                     
-                    <div *ngFor="let step of ricetta.preparazione">
-                        <input class="form-control m-2" type="text" [value]="step">
+                    <div *ngFor="let step of ricetta.preparazione" class="mt-2">
+                        <div class="col-md-12 d-flex justify-content-around">
+                            <input class="form-control" type="text" [value]="step" disabled>
+                            <div class="cliccable m-2" (click)="eliminaStepPreparazione(step)"><i class="fa-solid fa-trash fa-lg lh-lg"></i></div>  
+                        </div>       
                     </div>
                 </div>              
             </div>
 
             <div class="row mt-5">
-                <button class="btn btn-outline-dark w-25" (click)="salvaRicetta()">Salva Ricetta</button>
+                <button class="btn btn-outline-dark w-25" 
+                (click)="salvaRicetta(TxtNomeRicetta.value, TxtTempoPreparazione.value, TxtDifficolta.value, TxtDescrizione.value, TxturlImmagine.value)">Salva Ricetta</button>
             </div>
         </div>
 
