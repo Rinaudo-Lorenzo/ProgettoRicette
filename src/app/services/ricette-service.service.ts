@@ -65,16 +65,18 @@ export class RicetteServiceService {
   }
 
   inserimentoRicetta(ricetta: Ricette){
-    fetch(this.API+ricetta.id,
-      {
-        method: 'PUT',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(ricetta)
-      })
-    .then(response => response.json())
-    .then (data => 
-        ricetta.id = 
-        data += ricetta
-      )
-  }
+    this.datastorage.PostRequest('', ricetta).subscribe((risposta) => console.log(risposta));
+
+  //   fetch(this.API+ricetta.id,
+  //     {
+  //       method: 'PUT',
+  //       headers: {'Content-Type': 'application/json'},
+  //       body: JSON.stringify(ricetta)
+  //     })
+  //   .then(response => response.json())
+  //   .then (data => 
+  //       ricetta.id = 
+  //       data += ricetta
+  //     )
+   }
 }

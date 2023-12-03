@@ -22,13 +22,11 @@ export class ModificaRicettaComponentComponent {
 
     try{
       this.ricetta = await this.ricetteservice.OttieniRicetta(this.id); 
-      if(this.ricetta.id == undefined){
-        this.ricetta.id = "10";
+      if(this.ricetta.id == ""){
+        
         this.ricetta.nome = "";
         this.ricetta.descrizione = "";
         this.ricetta.difficolta = "";
-        this.ricetta.preparazione = [];
-        this.ricetta.ingredienti = [];
         this.ricetta.URLimmagine = "";
       }
          
@@ -36,10 +34,13 @@ export class ModificaRicettaComponentComponent {
       console.error(error)
     }
  }
-  // this.ricetteservice.modificaRicetta(this.ricetta);
 
   aggiungiIngrediente(quantita: string, nomeIngrediente: string){
     if(quantita.length != 0 && nomeIngrediente.length != 0){
+      if(this.ricetta.ingredienti == undefined){
+        this.ricetta.ingredienti = [];
+        this.ricetta.preparazione = [];
+      }
       this.ricetta.ingredienti.push(new Ingrediente(nomeIngrediente, quantita));
     }
   }
@@ -53,12 +54,10 @@ export class ModificaRicettaComponentComponent {
   }
 
   aggiungiStepPreparazione(step: string){
-    console.log("preparazione");
     this.ricetta.preparazione.push(step);
   }
 
    async salvaRicetta(nomeRicetta: string, tempoPreparazione: string, difficolta: string, descrizione: string, URLimmagine: string){
-    if(this.id != undefined){ //ho passato un id, sto modificando una ricetta
 
       if(nomeRicetta != "" && tempoPreparazione != "" && difficolta != "" && descrizione != "" && URLimmagine != ""
           && this.ricetta.ingredienti.length > 0 && this.ricetta.preparazione.length >0){
@@ -69,11 +68,11 @@ export class ModificaRicettaComponentComponent {
         this.ricetta.descrizione = descrizione;
         this.ricetta.URLimmagine = URLimmagine;
 
-        if(this.id != undefined){
+        if(this.ricetta.id != undefined){
          this.ricetteservice.modificaRicetta(this.ricetta);
 
         }else{
-          
+          console.log(this.ricetta);
            this.ricetteservice.inserimentoRicetta(this.ricetta);
         }
 
@@ -83,11 +82,6 @@ export class ModificaRicettaComponentComponent {
         alert("Compilare tutti i campi!!");
 
       }
-
-    }else{
-      this.ricetta.preparazione =  [];
-      this.ricetta.ingredienti = [];
-    }
   }
 
   
