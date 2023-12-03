@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RicetteServiceService } from '../services/ricette-service.service';
 import { Ricette } from '../model/ricette';
+import { Ingrediente } from '../model/ingrediente';
 
 @Component({
   selector: 'app-dettagli-ricette-component',
@@ -11,37 +12,35 @@ import { Ricette } from '../model/ricette';
 export class DettagliRicetteComponentComponent {
   ricetta! :Ricette;
   numeroPersone : number = 1;
+  ingredienti! : Ingrediente[];
 
   constructor(private router: ActivatedRoute, private ricettaService:RicetteServiceService){  }
 
    async ngOnInit(){
       let id = this.router.snapshot.params['id'];
       try{
-        this.ricetta = await this.ricettaService.OttieniRicetta(id);    
+        this.ricetta = await this.ricettaService.OttieniRicetta(id);
+
+        this.ingredienti = this.ricetta.ingredienti.slice();
+        console.log("Ingredienti: " + this.ingredienti);
+        console.log("Ricetta: " + this.ricetta.ingredienti);
+
       }catch(error){
         console.error(error)
       }
    }
 
-   calcolaDosi(quantita: string){
-    const [valore, tipo] = quantita.split(/(\d+)/).filter(Boolean);
+   cambioPersone(event: Event, persone: string){
+    this.numeroPersone = +persone;
+    // const value = (event.target as HTMLInputElement).value;
+    // this.numeroPersone = parseInt(value);
 
-    return (parseInt(valore) * this.numeroPersone) + " " +tipo;
-
-   }
-
-   cambioPersone(event: Event){
-    const value = (event.target as HTMLInputElement).value;
-    this.numeroPersone = parseInt(value);
-
-    for(let i = 0; i< this.ricetta.ingredienti.length; i++)
-      this.ricetta.ingredienti[i].quantita = this.printAmount(this.ricetta.ingredienti[i].quantita); 
-  }
-
-  printAmount(quantita: string){
-    const [amountValue, amountUnit] = quantita.split(/(\d+)/).filter(Boolean);
-    return (parseInt(amountValue) * this.numeroPersone) + amountUnit;
-  }
-
+    // for(let i = 0; i< this.ricetta.ingredienti.length; i++){
+    //   console.log(this.ingredienti);
+    //   //if(this.ingredienti[i].quantita != ""  || this.ingredienti[i].quantita.toUpperCase() != "QB")
+    //     this.ricetta.ingredienti[i].quantita = (+this.ingredienti[i]  * this.numeroPersone).toString();
+    // }
     
+  }
+   
 }

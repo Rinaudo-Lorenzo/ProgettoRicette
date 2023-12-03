@@ -33,14 +33,16 @@
 
                     <!-- Nuovo ingrediente -->
                     <div class="d-flex col-md-12 mb-5">
-                        <input class="form-control text-center me-3" id="inputQuantity" type="text" placeholder="Inserisci quantità.." #txtQuantita/>
-                        <input class="form-control text-center me-3" id="inputQuantity" type="text" placeholder="nuovo ingrediente.." #txtIngrediente/>
-                        <button class="btn btn-success" (click)="aggiungiIngrediente(txtQuantita.value, txtIngrediente.value)"><b>+</b></button>
+                        <input class="form-control text-center me-3" id="inputQuantity" type="text" placeholder="Inserisci quantità numerica" #txtQuantita/>
+                        <input class="form-control text-center me-3" id="inputQuantity" type="text" placeholder="inserisci unità" #txtunita/>
+                        <input class="form-control text-center me-3" id="inputQuantity" type="text" placeholder="inserisci ingrediente" #txtIngrediente/>
+                        <button class="btn btn-success" (click)="aggiungiIngrediente(txtQuantita.value, txtunita.value, txtIngrediente.value)"><b>+</b></button>
                     </div>
 
                     <div *ngFor="let ingrediente of ricetta.ingredienti" class="col-md-12 d-flex mt-2">
                         <div class="col-md-12 d-flex justify-content-around">
                             <input class="form-control me-3" id="inputQuantity" type="num" [value]="ingrediente.quantita" disabled/>
+                            <input class="form-control me-3" id="inputQuantity" type="num" [value]="ingrediente.unita" disabled/>
                             <input class="form-control" type="text"  [value]="ingrediente.nome" disabled>
 
                             <div class="cliccable m-2" (click)="eliminaIngrediente(ingrediente.nome)"><i class="fa-solid fa-trash fa-lg lh-lg"></i></div>                         

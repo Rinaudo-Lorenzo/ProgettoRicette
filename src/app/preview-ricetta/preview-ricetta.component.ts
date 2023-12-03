@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RicetteServiceService } from '../services/ricette-service.service';
 import { Router } from "@angular/router";
-import { Ricette } from '../model/ricette';
 
 @Component({
   selector: 'app-preview-ricetta',
@@ -22,8 +21,8 @@ export class PreviewRicettaComponent {
     this.router.navigate(['details', id]);
   }
 
-   async cancellaRicetta(id:string){
-     await this.ricetteservice.eliminaRicetta(id);
+   cancellaRicetta(id:string){
+     this.ricetteservice.eliminaRicetta(id);
      this.ricetteservice.ElencoRicette();
   }
 

@@ -35,13 +35,14 @@ export class ModificaRicettaComponentComponent {
     }
  }
 
-  aggiungiIngrediente(quantita: string, nomeIngrediente: string){
-    if(quantita.length != 0 && nomeIngrediente.length != 0){
+  aggiungiIngrediente(quantita: string, unita: string, nomeIngrediente:string){
+    //il nome dell'ingrediente deve essere sempre inserito, gescisce il QB (unita nulla)
+    if(nomeIngrediente.length != 0 && (quantita.length != 0 || unita.length != 0)){ 
       if(this.ricetta.ingredienti == undefined){
         this.ricetta.ingredienti = [];
         this.ricetta.preparazione = [];
       }
-      this.ricetta.ingredienti.push(new Ingrediente(nomeIngrediente, quantita));
+      this.ricetta.ingredienti.push(new Ingrediente(nomeIngrediente,quantita, unita));
     }
   }
 
